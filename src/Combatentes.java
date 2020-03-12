@@ -1,19 +1,38 @@
 
 public class Combatentes {
 
-	private String nome;
-	private String habilidades;
+	String nome;
+	int ataque; 
+	int defesa;
+	int HP = 100;
+	boolean vivo;
 	
-	private double HP = 100;
-	
-	public Combatentes(String nome, String habilidades) {
+	public Combatentes(String nome, int ataque, int defesa, int HP) {
 		this.nome = nome;
-		this.habilidades = habilidades; 
+		this.ataque = ataque; 
+		this.defesa = defesa;
+		this.HP = HP;
 }
-	public void ReceberDano (double HP) {
-		this.HP -= Dano;
+	public int ReceberDano (int Dano) {
+		HP -= Dano;
+		return HP;
 	}
 	
-	public void AtacarOponenete (double HP) {
-		this.HP += Ataque;
+	public int AtacarOponente (int Ataque) {
+		HP += Ataque;
+		return HP;
 	}
+	
+	public int HPAtual () {
+		return HP;
+	}
+	
+	public boolean vivo () {
+		if (HPAtual() > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+}

@@ -1,8 +1,10 @@
-
+import java.util.Random;
 public class Game {
 
-	public static void main(String[] args) {
-		Combatentes Combatente1 = new Combatentes("Humano", "Arqueiro");
+	public static void main (String[] args) {
+		Combate combate = new Combate();
+		
+		System.out.println(combate.batalha());
 
 	}
 }
